@@ -1,0 +1,459 @@
+/* 头尾相同样式 */
+/* 版心 */
+.wrapper {
+    margin: 0 auto;
+    width: 1240px;
+}
+
+/* 快捷导航 */
+.shotcut {
+    height: 52px;
+    background-color: #383838;
+
+}
+
+.shotcut .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 52px;
+    width: 1140px;
+
+
+}
+
+.shotcut .wrapper ul {
+    display: flex;
+    line-height: 52px;
+}
+
+.shotcut .wrapper ul li:last-child a {
+    /* 选中最后一个，注意最后child a */
+    border-right: none;
+    /* 去除最后一个有边框 */
+    padding-right: 0;
+}
+
+.shotcut li .iconfont {
+    margin-right: 4px;
+    vertical-align: middle;
+    /* 垂直居中 */
+}
+
+.shotcut .wrapper ul img {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+    /* 垂直居中 */
+}
+
+.wrapper ul a {
+
+    padding: 0 15px;
+    /* 上下内边距 */
+    font-size: 14px;
+    color: #cac8c8;
+    border-right: 1px solid #999;
+    /* 与字一边大，加给a,右边边框 */
+}
+
+.wrapper ul li .login {
+    color: #5Eb69c;
+}
+
+.wrapper ul li a:hover {
+    color: #5Eb69c;
+}
+
+/* 头部区域 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* 两边对齐 */
+    align-items: center;
+    /* 水平居中 */
+    margin-top: 22px;
+    margin-bottom: 22px;
+    margin-left: 300px;
+    height: 88px;
+    width: 1240px;
+
+}
+
+/* logo区域 */
+.header .logo {
+    display: flex;
+    align-items: flex-end;
+    /* 垂直居下 */
+    margin-right: 40px;
+    /* 边距 */
+    width: 400px;
+    /* 宽度设置不对啊 */
+    height: 88px;
+
+}
+
+.logo a {
+    display: block;
+    width: 200px;
+    height: 88px;
+    background-image: url("../favicon2.jpeg");
+    background-size: 160px 160px;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+
+
+.logo-text h4 {
+    display: flex;
+    font-weight: 400;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* 垂直居下 */
+    margin-left: -30px;
+    color: #242424;
+    font-size: 20px;
+    /* text-shadow: 1px 1px 10px #2d9486; */
+    /* box-shadow: inset 1px 1px 10px #2d9486; */
+    /* 添加阴影pxpxpx */
+    font-family: "微软雅黑";
+    border-radius: 6px;
+}
+
+.logo-text span {
+    display: inline-block;
+    /* 确保 margin-bottom 可用 */
+    margin-bottom: 10px;
+    /* 调整位置 */
+    margin-left: -30px;
+    font-size: 10px;
+    color: #999;
+    font-family: "微软雅黑";
+
+}
+
+/* 导航区域 */
+.nav {
+    margin-top: 33px;
+    margin-right: 28px;
+
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    margin-right: 35px;
+}
+
+.nav li a {
+    padding-bottom: 10px;
+    /* 下边距 */
+
+}
+
+.nav li a:hover {
+    color: #5Eb69c;
+    border-bottom: 2px solid #5Eb69c;
+    /* 下划线 */
+}
+
+/* 搜索区域 */
+.search {
+    display: flex;
+    width: 170px;
+    height: 34px;
+    border-bottom: 2px solid #f4f4f4;
+    margin-top: 35px;
+    margin-right: 10px;
+}
+
+.search input {
+    /* 浏览器优先生效input标签，所以flex：1不生效 */
+    /* 解决办法width:0 */
+    flex: 1;
+    /* 占满剩余空间 */
+    width: 0;
+    border: none;
+    outline: none;
+    /* 去除点击时的边框 */
+
+}
+
+.search input::placeholder
+
+/* 提示文字提示语颜色 */
+    {
+
+    color: #CCC;
+}
+
+.search .iconfont {
+    align-self: center;
+    font-size: 28px;
+    color: #CCC;
+    margin-right: 8px;
+    line-height: 34px;
+    /* 垂直居中 */
+
+
+}
+
+
+/* 购物车区域 */
+.cart {
+    position: relative;
+    /* 父级加相对位置 ，不然脱标*/
+    margin-top: 33px;
+    margin-right: 28px;
+    display: flex;
+
+}
+
+.cart .iconfont {
+    font-size: 26px;
+}
+
+.cart i {
+    position: absolute;
+    top: 1px;
+    /* 适当调整位置 */
+    right: -10px;
+    /* 让徽标靠近购物车 */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px;
+    /* 让内容有一定的内边距 */
+    min-width: 18px;
+    /* 保证徽标不会变成方形 */
+    height: 18px;
+    background-color: #ee400cce;
+    border-radius: 50%;
+    /* 让徽标成为圆形 */
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 18px;
+
+}
+
+/* 底部区域 */
+.footer {
+    position: relative;
+    height: 580px;
+    background-color: #f4f4f4;
+
+}
+
+.footer .wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    /* 充满网页宽度100% */
+
+}
+
+
+
+/* 帮助中心区域 */
+.help {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    padding-top: 60px;
+    height: 300px;
+    /* align-self: start; */
+    margin-left: 130px;
+
+}
+
+/* left区域 */
+.help .left {
+    display: flex;
+    padding-left: 100px;
+    border-right: 1px solid #e0dede;
+}
+
+.help .left dl {
+    margin-right: 84px;
+}
+
+/* 结构简单时，last-child 可以直接用。
+结构复杂且不同类型元素混合时，
+last-of-type 更安全，避免选不中 */
+.help .left dl:last-of-type {
+    margin-right: 85px;
+}
+
+.help .left dt {
+    font-size: 20px;
+    margin-bottom: 26px;
+}
+
+.help .left dd {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.help .left dd a {
+    color: #969696;
+    text-align: center;
+    /* 添加文字居中 */
+}
+
+.help .left dd a span {
+    color: #5Eb69c;
+}
+
+/* right区域 */
+.help .right {
+    /* flex: 1; */
+    /* 让 right 自适应剩余空间 */
+    /* max-width: 50%; */
+    width: 400px;
+
+    /* 盒子有高宽才能设置边框 */
+    padding-right: 270px;
+    margin-left: 100px;
+    border-right: 1px solid #CCCCCC;
+    cursor: default;
+    /* cursor: default; */
+}
+
+.help .right ul li {
+    display: flex;
+    font-size: 10px;
+    margin-right: 100px;
+}
+
+.help .right ul li .bilbili img {
+    width: 120px;
+    height: 120px;
+    margin-right: 50px;
+    border-radius: 15px;
+    /* 圆角 */
+    margin-bottom: 20px;
+    /* 下边距 */
+    cursor: default;
+    /* 添加这一行，设置鼠标悬停时的光标样式为默认 */
+}
+
+.help .contact h5 {
+    transform: translateX(100px);
+    font-size: 20px;
+    color: #1b1b1b;
+    font-weight: 400;
+    margin-bottom: 20px;
+    /* 下边距 */
+    cursor: default;
+    /* 添加这一行，设置鼠标悬停时的光标样式为默认 */
+}
+
+.help .right ul p {
+    font-size: 14px;
+    color: #969696;
+    margin-top: -15px;
+    /* 上边距 */
+    line-height: 25px;
+    /* 行高 */
+    margin-left: 23px;
+}
+
+
+/* phone区域 */
+.phone {
+    position: absolute;
+    left: 1650px;
+    top: 60px;
+    cursor: default;
+}
+
+.phone .numb {
+    font-size: 15px;
+}
+
+.numb .hd h5 {
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+
+}
+
+.numb p {
+    padding-top: 15px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #969696;
+
+}
+
+
+
+
+/* 服务区域 */
+.service {
+    padding: 60px 0;
+    height: 178px;
+    border-bottom: 1px solid #ccc;
+    background-color: #2b2b2b;
+    cursor: default;
+    /* 添加这一行，设置鼠标悬停时的光标样式为默认 */
+}
+
+.service ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* 所有间距完全相等*/
+}
+
+.service li h5 {
+    width: 58px;
+    height: 57px;
+    background-image: url(../images/HD\ Social\ Media\ White\ Outline\ Round\ Icons\ PNG.jpg);
+    background-size: 228.3px 229.7px;
+    background-position: -157.9px -81.6px;
+    background-repeat: no-repeat;
+}
+
+.service li {
+    display: flex;
+}
+
+.service li p {
+    font-size: 25px;
+    color: #fffbfb;
+    line-height: 57px;
+    margin-left: 20px;
+}
+
+.service li:nth-child(2) h5 {
+    background-position: -16px -149px;
+    /* 背景位置.(0.48*29,0.48*314) */
+}
+
+/* 版权区域 */
+.copyright {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2b2b2b;
+
+}
+
+.copyright p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #969696;
+
+}
+
+.copyright a {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #969696;
+}
